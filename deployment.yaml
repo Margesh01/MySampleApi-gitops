@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dotnet-api
 spec:
-  replicas: 5   # <--- THIS IS WHERE YOU SET THE 4 INSTANCES!
+  replicas: 9   # <--- THIS IS WHERE YOU SET THE 4 INSTANCES!
   revisionHistoryLimit: 2  # <--- Only keep the last 3 ReplicaSets for rollback
   selector:
     matchLabels:
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: dotnet-api-container
-        image: margesh01/mysampleapi:17
+        image: margesh01/mysampleapi:24
         imagePullPolicy: Always  # Tells Kubernetes to use your local Docker image
         ports:
         - containerPort: 8080
