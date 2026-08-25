@@ -5,7 +5,7 @@ metadata:
   labels:
     app: dotnet-api
 spec:
-  replicas: 7   # <--- THIS IS WHERE YOU SET THE 4 INSTANCES!
+  replicas: 5   # <--- THIS IS WHERE YOU SET THE 4 INSTANCES!
   revisionHistoryLimit: 2  # <--- Only keep the last 3 ReplicaSets for rollback
   selector:
     matchLabels:
